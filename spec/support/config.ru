@@ -1,4 +1,4 @@
-%w[rack json pry mustermann].each { |gem| require gem }
+%w[rack json mustermann].each { |gem| require gem }
 
 Dir[File.expand_path('lib/**/*.rb')].each { |file| require_relative file }
 
@@ -8,5 +8,4 @@ router = Router.new do
   post '/auth', to: :create_session
 end
 
-# run router.to_app
-Rack::Handler::WEBrick.run router.to_app
+run router.to_app
