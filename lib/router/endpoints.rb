@@ -8,8 +8,7 @@ class Router
       end
 
       def hello(params)
-        binding.pry
-        "Hello #{params}"
+        "Hello #{params.to_json}"
       end
     end
   end
